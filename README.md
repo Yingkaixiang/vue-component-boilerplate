@@ -10,7 +10,8 @@
 - [ ] 支持 Sass。
 - [ ] 支持 Stylus。
 - [ ] 支持服务端渲染。
-- [ ] 支持主动配置 polyfill
+- [ ] 支持主动启动 polyfill
+- [ ] 支持主动启用 typescript
 
 ## 项目目录
 
