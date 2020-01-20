@@ -2,14 +2,16 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
+const merge = require('webpack-merge');
 
 const { resolve } = require('./util');
 
+const webpackBaseConfig = require('./webpack.base');
 const packageJSON = require('../package.json');
 
-module.exports = {
+module.exports = merge(webpackBaseConfig, {
   mode: 'none',
-  entry: resolve('../packages/index.js'),
+  entry: resolve('../src/index.js'),
   output: {
     path: resolve('../cjs'),
     filename: `${packageJSON.name}.js`,
@@ -17,6 +19,9 @@ module.exports = {
     libraryTarget: 'commonjs2',
   },
   resolve: {
+    alias: {
+      '@': resolve('../packages'),
+    },
     // 不添加 .js 会导致 node_module 里的库无法被解析
     // babel 报错 can't resolve ... in src/ ....
     extensions: ['.vue', '.js', '.ts'],
@@ -37,12 +42,19 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/,
+        include: resolve('../packages')
       },
+      {
+        test: /\.css$/,
+        use: [
+          'vue-style-loader',
+          'css-loader'
+        ]
+      }
     ]
   },
   plugins: [
     new VueLoaderPlugin(),
     new ProgressBarPlugin(),
   ],
-}
+});

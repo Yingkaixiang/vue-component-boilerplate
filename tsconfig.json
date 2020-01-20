@@ -2,5 +2,5 @@
   "compilerOptions": {
     "sourceMap": true
   },
-  "include": ["packages/"]
+  "include": ["src"]
 }
