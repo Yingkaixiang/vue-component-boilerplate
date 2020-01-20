@@ -10,6 +10,7 @@
 - [ ] 支持 Sass。
 - [ ] 支持 Stylus。
 - [ ] 支持服务端渲染。
+- [ ] 支持主动配置 polyfill
 
 ## 项目目录
 
@@ -23,3 +24,23 @@ git clone
 ```
 
 修改 `package.json` 的 `name` 属性为库的名称。
+
+## polyfill
+
+```bash
+npm i @babel/plugin-transform-runtime --save-dev
+npm i @babel/runtime --save
+npm i @babel/runtime-corejs3 --save
+```
+
+```js
+module.exports = {
+  // ... 其他配置
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      { corejs: 3 }
+    ]
+  ]
+}
+```

@@ -188,9 +188,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     test: function test() {
-      var a = 1; // new Promise((resolve) => {
-      //   resolve();
-      // });
+      var a = 1;
     }
   }
 });

@@ -13,9 +13,6 @@ export default {
   methods: {
     test() {
       const a = 1;
-      // new Promise((resolve) => {
-      //   resolve();
-      // });
     }
   }
 }
