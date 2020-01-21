@@ -21,7 +21,7 @@ module.exports = merge(webpackBaseConfig, {
   },
   resolve: {
     alias: {
-      '@': resolve('../packages'),
+      '@': resolve('../components'),
     },
     // 不添加 .js 会导致 node_module 里的库无法被解析
     // babel 报错 can't resolve ... in src/ ....
@@ -43,7 +43,7 @@ module.exports = merge(webpackBaseConfig, {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: resolve('../packages')
+        include: resolve('../components')
       },
       {
         test: /\.(png|jpe?g|gif)$/i,

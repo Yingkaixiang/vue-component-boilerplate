@@ -1,4 +1,5 @@
-import Test from '../packages/Test';
-import Test1 from '../packages/Test1';
+import Button from '../components/button/';
 
-export default { Test, Test1 };
+import './style.scss';
+
+export { Button };
