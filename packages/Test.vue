@@ -1,7 +1,7 @@
 <template>
-  <div class="foo">
+  <div :class="$a.foo">
     {{ msg }}
-    <img src="~urix/index.js">
+    <img src="./pokeball.png">
   </div>
 </template>
 
@@ -22,3 +22,8 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" module="a">
+.foo { color: $color }
+.bar { display: flex }
+</style>

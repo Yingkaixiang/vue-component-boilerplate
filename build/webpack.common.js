@@ -3,6 +3,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 const merge = require('webpack-merge');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const { resolve } = require('./util');
 
@@ -31,6 +32,12 @@ module.exports = merge(webpackBaseConfig, {
   module: {
     rules: [
       {
+        enforce: 'pre',
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader'
       },
@@ -45,16 +52,23 @@ module.exports = merge(webpackBaseConfig, {
         include: resolve('../packages')
       },
       {
-        test: /\.css$/,
+        test: /\.(png|jpe?g|gif)$/i,
         use: [
-          'vue-style-loader',
-          'css-loader'
-        ]
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 1024,
+            },
+          },
+        ],
       }
     ]
   },
   plugins: [
     new VueLoaderPlugin(),
     new ProgressBarPlugin(),
+    new MiniCssExtractPlugin({
+      filename: `${packageJSON.name}.css`,
+    }),
   ],
 });
