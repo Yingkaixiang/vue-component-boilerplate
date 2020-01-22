@@ -1,4 +1,4 @@
-import Button from '../components/button';
+import Button from '../src/button.vue';
 
 import '../src/style.scss';
 
@@ -7,7 +7,9 @@ export const Text = () => ({
   template: '<Button />',
 });
 
+Text.story = { name: '默认' };
+
 export default {
-  title: 'Button',
+  title: 'Test | 按钮 Button',
   component: Button,
 };

@@ -18,6 +18,9 @@
 - [ ] 支持单元测试
 - [ ] 支持组件在线预览
 - [ ] 支持 CSS bem 规范
+- [ ] 支持 storybook 一键发布至CDN（七牛）或其他静态站点工具（Github page, zeit now）
+- [ ] 支持移动端调试
+- [ ] 自动可视化测试 puppter
 
 ## 项目目录
 
