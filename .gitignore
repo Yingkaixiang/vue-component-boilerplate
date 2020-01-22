@@ -6,6 +6,8 @@ node_modules
 
 # build files
 /dist
+/cjs
+/lib
 
 # local env files
 .env.local
