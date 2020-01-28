@@ -26,6 +26,14 @@
 - [ ] 使用 CSS bem 规范。
 - [x] 使用 Angular Commit 规范。
 
+## 如何使用脚本
+
+### 快速创建组件目录
+
+```bash
+npm run generate [component-name]
+```
+
 ## 项目目录
 
 - build 构建脚本
@@ -49,6 +57,12 @@ git@github.com:Yingkaixiang/vue-component-boilerplate.git
 ```bash
 # 启动本地调试
 npm run storybook
+
+# 构建按需加载
+npm run build-component
+
+# 构建全量加载
+npm run build
 ```
 
 ## 如何添加 Polyfill？

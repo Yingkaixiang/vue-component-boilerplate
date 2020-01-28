@@ -9,7 +9,7 @@ upperCase() {
 
 echo "创建文件夹 $1";
 
-folder=../components/$1;
+folder=components/$1;
 
 if [ ! -d $folder ]; then
   echo "文件夹不存在，正在为您创建..."
@@ -20,6 +20,13 @@ fi
 
 cd $folder
 echo "进入 `pwd` 目录"
+
+# index.js
+if [ ! -f "index.js" ]; then
+  echo "// 入口文件" >> index.js
+else
+  echo "index.js 已存在"
+fi
 
 # README.md
 if [ ! -f "README.md" ]; then

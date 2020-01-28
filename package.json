@@ -8,7 +8,8 @@
     "build-component": "webpack-cli --config ./build/webpack.component.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest"
+    "test": "jest",
+    "generate": "./bin/generate.sh"
   },
   "keywords": [],
   "author": "应开翔",

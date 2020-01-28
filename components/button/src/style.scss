@@ -1,5 +1,8 @@
-$color: red;
-
 .button {
-  color: $color;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  height: 32px;
+  padding: 0 15px;
+  font-size: 14px;
 }
