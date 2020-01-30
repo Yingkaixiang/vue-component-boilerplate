@@ -11,7 +11,13 @@ Default.story = { name: '默认' };
 
 export const Disabled = () => ({
   components: { Button },
-  template: '<Button disabled>默认</Button>',
+  template: `
+    <Button
+      disabled
+    >
+      默认
+    </Button>
+  `,
 });
 
 Disabled.story = { name: '不可用状态' };

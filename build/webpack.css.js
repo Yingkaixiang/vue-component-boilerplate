@@ -8,7 +8,7 @@ module.exports = {
       test: /\.scss$/,
       use: [
         {
-          loader: TARGET === 'storybook'
+          loader: TARGET.indexOf('storybook') !== -1
               ? 'vue-style-loader'
               : MiniCssExtractPlugin.loader,
           options: {

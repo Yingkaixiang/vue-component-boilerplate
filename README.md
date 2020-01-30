@@ -26,14 +26,6 @@
 - [ ] 使用 CSS bem 规范。
 - [x] 使用 Angular Commit 规范。
 
-## 如何使用脚本
-
-### 快速创建组件目录
-
-```bash
-npm run generate [component-name]
-```
-
 ## 项目目录
 
 - build 构建脚本
@@ -44,17 +36,20 @@ npm run generate [component-name]
   
 ## 如何使用
 
-将项目克隆值本地。
-
 ```bash
-git@github.com:Yingkaixiang/vue-component-boilerplate.git
-```
+# 克隆项目至本地
+git clone git@github.com:Yingkaixiang/vue-component-boilerplate.git
 
-在文件夹 `components/` 下创建组件文件夹，参考本项目示例创建相关文件，包括单元测试、源代码、story以及入口文件。
+# 进入项目
+cd vue-component-boilerplate
 
-修改 `package.json` 的 `name` 属性为作为最终导出的库的名称。
+# 安装依赖
+# 因为本项目依赖 node-sass，所以建议使用淘宝镜像
+npm i
 
-```bash
+# 快速创建一个组件
+npm run generate [component-name]
+
 # 启动本地调试
 npm run storybook
 
