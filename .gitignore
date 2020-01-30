@@ -20,3 +20,6 @@ yarn-error.log*
 
 # storybook
 .out
+
+# files
+build/qiniu.js

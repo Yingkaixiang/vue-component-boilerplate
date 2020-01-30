@@ -2,6 +2,11 @@
 
 一个用于创建 vue 组件的脚手架。
 
+在线示例：
+
+* [GitHub Pages](https://yingkaixiang.github.io/vue-component-boilerplate/)
+* [七牛云](http://qncdn.yingkx.top/vue-component-boilerplate/index.html)
+
 ## 特性
 
 - [x] 支持 创建单个组件或组件库。
@@ -11,8 +16,10 @@
 - [x] 支持 Sass。
 - [ ] 支持 Less。
 - [ ] 支持 Stylus。
-- [x] 支持 storybook（作为本地调试以及在线示例预览）。
-- [ ] 支持 storybook 一键发布至 CDN 或其他静态站点工具，如 Github Page 或 ZEIT now。
+- [x] 支持 storybook。
+- [x] 支持 storybook 一键发布在线示例。
+  - [x] GitHub Pages
+  - [x] 七牛云
 - [ ] 支持 图片小于阀定值自动转换成 base64（建议组件库中的图片使用字体图标或 CDN）。
 - [ ] 支持 图片自动上传至 CDN（默认支持上传至七牛）。
 - [x] 支持 使用 Jest 进行单元测试。
