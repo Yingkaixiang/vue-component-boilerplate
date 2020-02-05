@@ -29,7 +29,7 @@
 
 ## 规范
 
-- [ ] 使用 ESLint 作为编码规范。
+- [x] 使用 ESLint 作为编码规范。
 - [ ] 使用 CSS bem 规范。
 - [x] 使用 Angular Commit 规范。
 
@@ -65,7 +65,14 @@ npm run build-component
 
 # 构建全量加载
 npm run build
+
+# 使用 npm link 调试时请查看以下的问题
+# https://cli.vuejs.org/guide/troubleshooting.html#symbolic-links-in-node-modules
 ```
+
+## 关于 ESLint 规范
+
+本项目使用 [eslint-config-team-spec](https://github.com/Yingkaixiang/eslint-config-team-spec) 作为 `ESLint` 规范。此规范是笔者基于 [eslint-config-alloy](https://github.com/AlloyTeam/eslint-config-alloy) 的规范整理出的自己团队的编码规范。如果你不想使用我的规则，可以自行替换为你的规则。
 
 ## 如何添加 Polyfill？
 
