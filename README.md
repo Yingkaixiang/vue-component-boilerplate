@@ -1,6 +1,6 @@
 # vue-component-boilerpalte-v2
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/Yingkaixiang/vue-component-boilerplate.svg)](https://greenkeeper.io/)
+![Build Status](https://travis-ci.com/Yingkaixiang/vue-component-boilerplate.svg?branch=master) [![Greenkeeper badge](https://badges.greenkeeper.io/Yingkaixiang/vue-component-boilerplate.svg)](https://greenkeeper.io/)
 
 一个用于创建 vue 组件的脚手架。
 
