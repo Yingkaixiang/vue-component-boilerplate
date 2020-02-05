@@ -2,7 +2,7 @@
 
 ![Build Status](https://travis-ci.com/Yingkaixiang/vue-component-boilerplate.svg?branch=master) [![Greenkeeper badge](https://badges.greenkeeper.io/Yingkaixiang/vue-component-boilerplate.svg)](https://greenkeeper.io/)
 
-一个用于创建 vue 组件的脚手架。
+一个用于快速创建 vue 组件（库）的脚手架。
 
 在线示例：
 
@@ -26,10 +26,13 @@
 - [ ] 支持 图片自动上传至 CDN。
 - [x] 支持 使用 Jest 进行单元测试。
 - [ ] 支持 移动端调试。
-- [ ] 支持 可视化自动测试。
 - [x] 支持 快捷功能脚本（如：一键创建组件目录及相关默认文件）。
 - [x] 支持 CI/CD。
   - [x] travis CI
+- [ ] 支持 git commit 工作流
+  - [ ] 代码风格检测
+  - [ ] 单元测试
+  - [ ] commit message 提交规范
 
 ## 规范
 
@@ -39,11 +42,15 @@
 
 ## 项目目录
 
-- build 构建脚本
-- components 组件
-- cjs 全量加载输出目录
-- lib 按需加载输出目录
-- src 全量导入入口
+- .storybook - `storybook` 相关配置
+- .vscode - `VSCode` 相关配置
+- bin - 辅助构建用的脚本
+- build - 构建脚本
+- components - 组件
+- cjs - 全量加载输出目录
+- lib - 按需加载输出目录
+- jest - `jest` 相关配置
+- src - 全量导入入口
   
 ## 如何使用
 
@@ -113,3 +120,5 @@ module.exports = {
 ## 为什么不在 .vue 文件中写 css？
 
 组件库本身有一套自己的 CSS 命名规则，保证唯一的命名空间以及可以方便的进行修改。所以 scoped 和 CSS Module 对于组件库来说是没有意义的。但是在 .vue 文件中使用 `<style></style>` 标签的话 `vue-loader` 一定会把相关的 CSS 处理逻辑（如模拟 scoped 特性）打包进最终的文件里。所以采用分离的方式编写 CSS，也能做到组件库样式的统一管理。
+
+> 如果你有什么建议或者想法可以给我发邮件 rubykaikai@gmail.com 来一起探讨哦！~
