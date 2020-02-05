@@ -11,7 +11,8 @@
     "deploy-local": "npm run build-storybook && http-server .out",
     "deploy-ghpages": "storybook-to-ghpages",
     "deploy-qiniu": "./bin/qiniu-deploy.js",
-    "test": "jest",
+    "test": "run-s eslint jest",
+    "jest": "jest",
     "generate": "./bin/generate.sh",
     "eslint": "eslint components --fix"
   },
@@ -49,6 +50,7 @@
     "jest": "^24.9.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.19.1",
     "progress-bar-webpack-plugin": "^2.1.0",

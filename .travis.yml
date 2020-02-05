@@ -1,0 +1,14 @@
+language: node_js
+
+node_js:
+  - lts/*
+
+install:
+  - npm ci
+
+branches:
+  only:
+    - master
+
+script:
+  - npm test

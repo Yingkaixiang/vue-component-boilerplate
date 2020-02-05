@@ -25,7 +25,9 @@
 - [x] 支持 使用 Jest 进行单元测试。
 - [ ] 支持 移动端调试。
 - [ ] 支持 可视化自动测试。
-- [x] 支持 快捷功能脚本（如：一键创建组件目录及相关默认文件）。 
+- [x] 支持 快捷功能脚本（如：一键创建组件目录及相关默认文件）。
+- [x] 支持 CI/CD。
+  - [x] travis CI 
 
 ## 规范
 
@@ -73,6 +75,14 @@ npm run build
 ## 关于 ESLint 规范
 
 本项目使用 [eslint-config-team-spec](https://github.com/Yingkaixiang/eslint-config-team-spec) 作为 `ESLint` 规范。此规范是笔者基于 [eslint-config-alloy](https://github.com/AlloyTeam/eslint-config-alloy) 的规范整理出的自己团队的编码规范。如果你不想使用我的规则，可以自行替换为你的规则。
+
+## 关于 node-sass
+
+将当前依赖的镜像源设置成淘宝即可。
+
+```bash
+npm config set sass_binary_site https://npm.taobao.org/mirrors/node-sass/
+```
 
 ## 如何添加 Polyfill？
 
