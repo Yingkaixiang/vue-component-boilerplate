@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'Button',
+  name: 'demo-button',
   props: {
     disabled: {
       type: Boolean,
