@@ -7,7 +7,7 @@
 在线示例：
 
 * [GitHub Pages](https://yingkaixiang.github.io/vue-component-boilerplate/)
-* [七牛云](http://qncdn.yingkx.top/vue-component-boilerplate/index.html)
+* [七牛云](http://qncdn.yingkx.top/vue-component-boilerplate/index.html?id=202002062132)
 
 ## 特性
 
