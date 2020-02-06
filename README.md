@@ -28,10 +28,10 @@
 - [x] 支持 快捷功能脚本（如：一键创建组件目录及相关默认文件）。
 - [x] 支持 CI/CD。
   - [x] travis CI
-- [ ] 支持 git commit 工作流
-  - [ ] 代码风格检测
-  - [ ] 单元测试
-  - [ ] commit message 提交规范
+- [x] 支持 git commit 工作流
+  - [x] 代码风格检测
+  - [x] 单元测试
+  - [x] commit message 提交规范
 
 ## 规范
 
