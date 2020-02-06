@@ -16,15 +16,20 @@ const config = new qiniu.conf.Config();
 config.zone = qiniu.zone.Zone_z0;
 
 const formUploader = new qiniu.form_up.FormUploader(config);
-const putExtra = new qiniu.form_up.PutExtra();
 
-function upload(localFile, key) {
-  formUploader.putFile(uploadToken, key, localFile, putExtra, function(respErr,
-    respBody, respInfo) {
+function upload(localFile, key, fileInfo) {
+  const putExtra = new qiniu.form_up.PutExtra({
+    mimeType: [fileInfo.mimeType],
+  });
+  formUploader.putFile(uploadToken, key, localFile, putExtra, function(
+    respErr,
+    respBody,
+    respInfo,
+  ) {
     if (respErr) {
       throw respErr;
     }
-    if (respInfo.statusCode == 200) {
+    if (respInfo.statusCode === 200) {
       console.log(respBody);
     } else {
       console.log(respInfo.statusCode);

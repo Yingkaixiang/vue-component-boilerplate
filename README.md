@@ -127,6 +127,10 @@ import { Button } from 'components';
 npm config set sass_binary_site https://npm.taobao.org/mirrors/node-sass/
 ```
 
+## 如何使用七牛上传脚本
+
+将 `build` 文件中的 `qiniu.example.js` 修改为 `qiniu.js`，并将代码里的 `<Access Key>` `<Secret Key>` `<bucket>` 替换成你的即可。
+
 ## 如何添加 Polyfill？
 
 原则上组件库默认不添加 Polyfill，原因是防止组件库的使用者在项目中已经主动添加了 Polyfill，总而使得我们提供的组件库代码将其覆盖或重复打包相同功能的代码。如果你想要添加的话，可以使用以下方法：
