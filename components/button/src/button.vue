@@ -1,7 +1,7 @@
 <template>
   <button
     :disabled="disabled"
-    class="button"
+    class="demo__button_primary"
   >
     <slot />
   </button>

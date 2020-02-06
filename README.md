@@ -36,7 +36,7 @@
 ## 规范
 
 - [x] 使用 ESLint 作为编码规范。
-- [ ] 使用 CSS bem 规范。
+- [x] 使用 CSS bem 规范。
 - [x] 使用 Angular Commit 规范。
 
 ## 项目目录
