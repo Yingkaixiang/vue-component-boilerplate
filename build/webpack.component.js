@@ -8,14 +8,14 @@ const webpackBaseConfig = require('./webpack.base');
 module.exports = merge(webpackBaseConfig, {
   entry: getEntries(),
   output: {
-    path: resolve("../lib"),
-    filename: "[name]/index.js",
+    path: resolve('../lib'),
+    filename: '[name].js',
     libraryExport: 'default',
-    libraryTarget: "commonjs2",
+    libraryTarget: 'commonjs2',
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name]/style.css",
+      filename: '[name]/style.css',
     }),
   ],
 });

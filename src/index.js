@@ -1,5 +1,6 @@
 import Button from '../components/button/';
 
+// 组件库导入
 const components = [Button];
 
 const install = function(Vue) {
@@ -14,3 +15,6 @@ export default {
   install,
   Button,
 };
+
+// 单个组件可以直接这样导出
+// export default Button;

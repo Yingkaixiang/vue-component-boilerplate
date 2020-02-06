@@ -81,6 +81,40 @@ npm run build
 # https://cli.vuejs.org/guide/troubleshooting.html#symbolic-links-in-node-modules
 ```
 
+## 依赖方如何安装组件库？
+
+### 全量导入
+
+```js
+// components 为你的组件库名称
+// style 为你的 CSS 文件名
+import components from 'components';
+import 'components/cjs/style.css';
+```
+
+### 按需加载
+
+首先在依赖方的项目中安装以下依赖。
+
+```bash
+npm i babel-plugin-component -D
+```
+
+然后在 babel 配置文件中加入以下代码，`components` 为你的组件库名称。
+
+```json
+{
+  "plugins": [["component", { "libraryName": "components" }]]
+}
+```
+
+然后在你的文件中这样导入即可。
+
+```js
+// components 为你的组件库名称
+import { Button } from 'components';
+```
+
 ## 关于 ESLint 规范
 
 本项目使用 [eslint-config-team-spec](https://github.com/Yingkaixiang/eslint-config-team-spec) 作为 `ESLint` 规范。此规范是笔者基于 [eslint-config-alloy](https://github.com/AlloyTeam/eslint-config-alloy) 的规范整理出的自己团队的编码规范。如果你不想使用我的规则，可以自行替换为你的规则。
