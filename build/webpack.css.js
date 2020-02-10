@@ -4,28 +4,36 @@ const TARGET = process.env.npm_lifecycle_event;
 
 module.exports = {
   module: {
-    rules: [{
-      test: /\.scss$/,
-      use: [
-        {
-          loader: TARGET.indexOf('storybook') !== -1
-              ? 'vue-style-loader'
-              : MiniCssExtractPlugin.loader,
-          options: {
-            esModule: true,
-          }
-        },
-        {
-          loader: 'css-loader',
-        },
-        "postcss-loader",
-        {
-          loader: 'sass-loader',
-          options: {
-            prependData: `$color: green;`
-          }
-        }
-      ],
-    }],
+    rules: [
+      {
+        test: /\.ts$/,
+        loader: 'ts-loader',
+        options: { appendTsSuffixTo: [/\.vue$/] },
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader:
+              TARGET.indexOf('storybook') !== -1
+                ? 'vue-style-loader'
+                : MiniCssExtractPlugin.loader,
+            options: {
+              esModule: true,
+            },
+          },
+          {
+            loader: 'css-loader',
+          },
+          'postcss-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              prependData: `$color: green;`,
+            },
+          },
+        ],
+      },
+    ],
   },
 };

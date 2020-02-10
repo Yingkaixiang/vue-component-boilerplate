@@ -6,6 +6,8 @@ module.exports = {
   transform: {
     '.*\\.(vue)$': 'vue-jest',
     '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
+    '^.+\\.tsx?$': 'ts-jest',
     '\\.scss$': '<rootDir>/jest/transformers/sass.js',
   },
+  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
 };

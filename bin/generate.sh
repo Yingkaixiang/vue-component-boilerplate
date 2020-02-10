@@ -93,7 +93,7 @@ echo "进入 `pwd` 目录"
 
 vue="$1.vue";
 if [ ! -f $vue ]; then
-  echo "<template><div class="$1">$vue</div></template>" >> $vue;
+  echo "<template><div class=\"$1\">$vue</div></template>" >> $vue;
 else
   echo "$vue 已存在"
 fi

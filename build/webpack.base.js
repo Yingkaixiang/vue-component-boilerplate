@@ -26,11 +26,6 @@ module.exports = merge(webpackCSSConfig, {
         loader: 'vue-loader',
       },
       {
-        test: /\.ts$/,
-        loader: 'ts-loader',
-        options: { appendTsSuffixTo: [/\.vue$/] },
-      },
-      {
         test: /\.js$/,
         loader: 'babel-loader',
         include: resolve('../components'),
