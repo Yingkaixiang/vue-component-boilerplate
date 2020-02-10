@@ -16,24 +16,24 @@ module.exports = merge(webpackCSSConfig, {
     // 不添加 .js 会导致 node_module 里的库无法被解析
     // babel 报错 can't resolve ... in src/ ....
     extensions: ['.vue', '.js', '.ts'],
-    modules: ['node_modules']
+    modules: ['node_modules'],
   },
   externals: ['vue', nodeExternals()],
   module: {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader'
+        loader: 'vue-loader',
       },
       {
         test: /\.ts$/,
         loader: 'ts-loader',
-        options: { appendTsSuffixTo: [/\.vue$/] }
+        options: { appendTsSuffixTo: [/\.vue$/] },
       },
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: resolve('../components')
+        include: resolve('../components'),
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
@@ -46,13 +46,10 @@ module.exports = merge(webpackCSSConfig, {
           },
         ],
       },
-    ]
+    ],
   },
-  plugins: [
-    new VueLoaderPlugin(),
-    new ProgressBarPlugin(),
-  ],
+  plugins: [new VueLoaderPlugin(), new ProgressBarPlugin()],
   optimization: {
-    minimize: false
+    minimize: false,
   },
 });
