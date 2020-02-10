@@ -13,18 +13,14 @@
 
 - [x] 支持 创建单个组件或组件库。
 - [x] 支持 组件库全量加载或按需加载。
-- [ ] 支持 TypeScript。
+- [x] 支持 TypeScript。
 - [x] 支持 Sass。
-- [ ] 支持 Less。
-- [ ] 支持 Stylus。
 - [x] 支持 storybook。
 - [x] 支持 storybook 一键发布在线示例。
   - [x] GitHub Pages
   - [x] 七牛云
 - [x] 支持 图片自动转换成 base64（默认小于 1kb）。
-- [ ] 支持 图片自动上传至 CDN。
 - [x] 支持 使用 Jest 进行单元测试。
-- [ ] 支持 移动端调试。
 - [x] 支持 快捷功能脚本（如：一键创建组件目录及相关默认文件）。
 - [x] 支持 CI/CD。
   - [x] travis CI

@@ -8,7 +8,4 @@ module.exports = {
     'eslint-config-team-spec/prettier',
     'eslint-config-team-spec/vue',
   ],
-  rules: {
-    'vue/require-direct-export': 'off',
-  }
 }
