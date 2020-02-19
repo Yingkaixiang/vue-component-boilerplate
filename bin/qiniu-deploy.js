@@ -2,7 +2,7 @@ const path = require('path');
 const glob = require('glob');
 const mime = require('mime-types');
 
-const upload = require('../build/qiniu');
+const upload = require('../build/utils/qiniu');
 
 const dirPath = path.resolve(
   __dirname,

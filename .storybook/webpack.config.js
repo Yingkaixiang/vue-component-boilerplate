@@ -1,5 +1,8 @@
-const merge = require('webpack-merge');
+const tsLoader = require('../build/loaders/ts-loader');
+const sassLoader = require('../build/loaders/sass-loader');
 
-const webpackBaseConfig = require('../build/webpack.css');
-
-module.exports = merge(webpackBaseConfig, {});
+module.exports = {
+  module: {
+    rules: [tsLoader, sassLoader],
+  },
+};

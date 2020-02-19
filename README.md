@@ -28,6 +28,7 @@
   - [x] 代码风格检测
   - [x] 单元测试
   - [x] commit message 提交规范
+- [x] 支持打包文件大小分析
 
 ## 规范
 
@@ -155,3 +156,8 @@ module.exports = {
 组件库本身有一套自己的 CSS 命名规则，保证唯一的命名空间以及可以方便的进行修改。所以 scoped 和 CSS Module 对于组件库来说是没有意义的。但是在 .vue 文件中使用 `<style></style>` 标签的话 `vue-loader` 一定会把相关的 CSS 处理逻辑（如模拟 scoped 特性）打包进最终的文件里。所以采用分离的方式编写 CSS，也能做到组件库样式的统一管理。
 
 > 如果你有什么建议或者想法可以给我发邮件 rubykaikai@gmail.com 来一起探讨哦！~
+
+## TODO
+
+* webpack 插件自动上传图片
+* 修改使用文档，加入 CI/CD greenkeeper 的配置方法
